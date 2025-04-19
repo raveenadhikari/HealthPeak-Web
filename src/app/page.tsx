@@ -35,7 +35,7 @@ export default function Home() {
   });
   const [userName, setUserName] = useState("");
   const [result, setResult] = useState<number | null>(null);
-  const [contributions, setContributions] = useState<Contribution[]>([]);
+
   const [personalizedTips, setPersonalizedTips] = useState<
   { feature: string; tip: string }[]>([]);
   const formRef = useRef<HTMLElement>(null);
@@ -170,7 +170,7 @@ export default function Home() {
         }, stepTime);
       };
       animate();
-      setContributions(data.contributions);
+      
       const actionableFeatures = Object.keys(healthTips);
 
       const filteredTips = data.contributions
@@ -319,7 +319,7 @@ export default function Home() {
                 <input
                   type="text"
                   name={key}
-                  value={(formData as any)[key]}
+                  value={formData[key as keyof typeof formData]}
                   onChange={handleChange}
                   required
                 />
