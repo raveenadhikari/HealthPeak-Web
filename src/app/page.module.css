@@ -77,6 +77,8 @@
   margin: 0 auto;
   padding: 60px 24px;
   border-radius: var(--radius);
+
+
 }
 
 .formGrid {
@@ -132,14 +134,33 @@
   color: var(--color-heading);
 }
 
-.definition {
-  font-size: 18px;
-  max-width: 800px;
+.definitionWrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
   margin: 0 auto 40px;
-  line-height: 1.6;
-  text-align: center;
-  color: var(--color-text);
 }
+
+.definitionImage {
+  max-width: 300px;
+  width: 100%;
+  /* Seamless integration */
+  background-color: transparent;
+  border-radius: 0;       /* No rounding */
+  box-shadow: none;       /* Remove shadow */
+  display: block;
+}
+.definition {
+  font-size: 20px;            /* Slightly larger for symmetry */
+  line-height: 1.7;
+  color: var(--color-text);
+  text-align: left;
+  max-width: 600px;
+}
+
 
 .infoGrid {
   display: grid;
@@ -214,7 +235,7 @@
 
 .infoGrid h3::before {
   content: "";
-  display: inline-block;
+  display: none;
   width: 32px;
   height: 32px;
   background-color: var(--color-accent);
@@ -295,4 +316,194 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto 20px;
+}
+
+.inputWithUnit {
+  position: relative;
+}
+
+.unitInputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.unitInputWrapper input {
+  flex: 1;
+}
+
+.unitLabel {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #6b7280; /* Tailwind slate-500-ish */
+}
+
+.tipCardGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.tipCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  color: var(--color-text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tipCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tipCard h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--color-heading);
+}
+
+.tipCard p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tipCardContent {
+  flex: 1;
+}
+
+
+.tipCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tipCard h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--color-heading);
+}
+
+.tipCard p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.teamGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.teamCard {
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-6px);
+}
+
+.teamPhoto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;         /* ⭕ Makes it circular */
+  object-fit: cover;
+  margin: 0 auto 12px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* optional soft shadow */
+}
+.feedbackForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.feedbackCard {
+  background-color: white;
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 100%;
+}
+
+.feedbackField {
+  margin-bottom: 20px;
+}
+
+.feedbackField label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-heading);
+}
+
+.feedbackField input,
+.feedbackField textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  background-color: #f9fafb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedbackField input:focus,
+.feedbackField textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+.feedbackButton {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedbackButton:hover {
+  background-color: #60a5fa;
+  transform: translateY(-1px);
+}
+
+.scrollArrow {
+  display: block;
+  margin-top: 5vw;
+  text-align: center;
+  font-size: 30px;
+  color: var(--color-primary);
+  animation: blinkDown 1.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes blinkDown {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(8px);
+  }
 }
