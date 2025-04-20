@@ -549,7 +549,7 @@ export default function Home() {
             <p>BSc (Hons) Data Science</p>
           </div>
           <div className={styles.teamCard}>
-            <img src="Ashani.jpg" alt="Member 2" className={styles.teamPhoto} />
+            <img src="Ashani.jpeg" alt="Member 2" className={styles.teamPhoto} />
             <h3>Ashani <br/>Madhushika</h3>
             <p>BSc (Hons) Statistics</p>
           </div>
