@@ -197,7 +197,7 @@ export default function Home() {
     <div>
       {/* NAVBAR */}
       <nav className={styles.navbar}>
-        <div className={styles.logo}>MetaPredict</div>
+        <div className={styles.logo}>HealthPeak</div>
         <div className={styles.navLinks}>
           <a href="#hero">Home</a>
           <a href="#form">Predict</a>
@@ -216,7 +216,7 @@ export default function Home() {
         viewport={{ amount: 0.6 }}
         variants={fadeIn}
       >
-        <h1>Welcome to MetaPredict</h1>
+        <h1>Welcome to HealthPeak</h1>
         <p>Empowering you with AI insights to assess your Metabolic Syndrome risk.</p>
 
         <div className={styles.heroInputRow}>
@@ -525,43 +525,7 @@ export default function Home() {
       </motion.section>
 
 
-      <motion.section
-        id="about"
-        className={styles.section}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.5 }}
-        variants={fadeIn}
-      >
-        <h2>About Us</h2>
-        <p style={{ marginBottom: "30px" }}>
-          We are a team of data science students dedicated to early disease prediction using AI. 
-          This platform was built as part of our group research project to promote awareness and prevention of Metabolic Syndrome.
-        </p>
-        <p style={{ marginTop: "30px", fontWeight: "bold" }}>
-          Group 03 – Final  Project
-        </p>
-
-        <div className={styles.teamGrid}>
-          <div className={styles.teamCard}>
-            <img src="/Chathuni.jpeg" alt="Member 1" className={styles.teamPhoto} />
-            <h3>Chathuni Rathnathilake</h3>
-            <p>BSc (Hons) Data Science</p>
-          </div>
-          <div className={styles.teamCard}>
-            <img src="Ashani.jpeg" alt="Member 2" className={styles.teamPhoto} />
-            <h3>Ashani <br/>Madhushika</h3>
-            <p>BSc (Hons) Statistics</p>
-          </div>
-          <div className={styles.teamCard}>
-            <img src="sadu.jpeg" alt="Member 3" className={styles.teamPhoto} />
-            <h3>Sandunika Muhandiramge</h3>
-            <p>BSc (Hons) Statistics</p>
-          </div>
-        </div>
-
-       
-      </motion.section>
+      
 
 
       {/* CONTACT */}
